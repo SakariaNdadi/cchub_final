@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Yes ma'am
+{% endblock title %}
+
+
+
+{% block content %}
+
+{% for post in posts %}
+<a href="{{ post.get_absolute_url}}">
+    <h1 class="text-blue-900 hover:text-red-500">{{ post.title }}</h1>
+</a>
+{% endfor %}
+
+{% endblock content %}
